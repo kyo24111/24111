@@ -1,45 +1,52 @@
+body{
+    color: #494E52;
+}
 h1 {
     text-align: center;
     font-family:unset;
 }
 
 .sea_img{
-    width: 50%;
+    width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-ul{
-    margin-left: 22%;
-    list-style: none;
-}
-
-
-.owner_name{
-    font-size: 50px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
 
 .about_me{
-    background-color:cornsilk;
-    padding: 20px 40px;
+    /* background-color:cornsilk; */
+    padding:5px 70px;
+    margin-top: 0px;
 }
 .note{
-    background-color: darkseagreen;
-    padding:20px 40px;
+    /* background-color: darkseagreen; */
+    padding:5px 70px;
+margin-top: 0px;
+
 }
 .background{
-    background-color: lightcoral;
-    padding:20px 40px;
+    /* background-color: lightcoral; */
+    padding:5px 70px;
 }
+.experience{
+    padding:5px 70px;
+}
+.education{
+    padding:5px 70px;
+}
+.sns_contact{
+    /* background-color: blueviolet; */
+    padding:5px 70px;
+}
+
 
 /* sns_account whole */
 /* already dealing with responsible design */
 .sns_account{
     display: grid;
     /* grid-template-rows: 50px ; */
-    grid-template-columns:12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    /* grid-template-columns:12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
+    grid-template-columns:20% 20% 20% 20% 20%;
 }
 .sns_account a{
     justify-content: center;
@@ -132,7 +139,7 @@ ul{
 }
 
 /* youtube */
-.youtube_button{
+/* .youtube_button{
     border: 1px solid #da1725;
     color: #da1725;
 }
@@ -141,10 +148,10 @@ ul{
 }
 .youtube_button::before{
     border-color: transparent transparent transparent #da1725;
-}
+} */
 
 /* linkedin */
-.linkedin_button{
+/* .linkedin_button{
     border: 1px solid #0077b5;
     color: #0077b5;
 }
@@ -153,10 +160,10 @@ ul{
 }
 .linkedin_button::before{
     border-color: transparent transparent transparent #0077b5;
-}
+} */
 
 /* wishlist */
-.wishlist_button{
+/* .wishlist_button{
     border: 1px solid #ff9900;
     color: #ff9900;
 }
@@ -165,4 +172,4 @@ ul{
 }
 .wishlist_button::before{
     border-color: transparent transparent transparent #ff9900;
-}
+} */
