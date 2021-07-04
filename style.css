@@ -15,29 +15,29 @@ h1 {
 
 .about_me{
     /* background-color:cornsilk; */
-    padding:5px 70px;
+    padding:5px 10%;
     margin-top: 0px;
 }
 .note{
     /* background-color: darkseagreen; */
-    padding:5px 70px;
+    padding:5px 10%;
 margin-top: 0px;
 
 }
 .background{
     /* background-color: lightcoral; */
-    padding:5px 70px;
+    padding:5px 10%;
 }
 .experience{
-    padding:5px 70px;
+    padding:5px 10%;
 }
 .exploration{
-    padding:5px 70px;
+    padding:5px 10%;
 }
 .sns_contact{
     /* background-color: blueviolet; */
-    padding:5px 70px;
-    margin-bottom: 100px;
+    padding:5px 10%;
+    margin-bottom: 20px;
 }
 
 
@@ -174,3 +174,16 @@ margin-top: 0px;
 .wishlist_button::before{
     border-color: transparent transparent transparent #ff9900;
 } */
+
+.pins_explanation{
+    padding:5px 10%;
+    margin-top: 0px;
+}
+
+#myMap{
+    height: 400px;
+    width: 80%;
+    margin-bottom: 100px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
