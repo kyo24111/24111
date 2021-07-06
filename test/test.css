@@ -1,0 +1,14 @@
+.jump_sns_contact {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #999999;
+    border: solid 2px #999999;
+    border-radius: 3px;
+    transition: .4s;
+  }
+  
+  .jump_sns_contact:hover {
+    background: #999999;
+    color: white;
+  }
