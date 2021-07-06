@@ -16,13 +16,28 @@
     <div class="about_me">
         <h2>About Me</h2>
         <p>
-            I am a University student at <a href="https://www.tsukuba.ac.jp/en/">Tsukuba</a>, Ibaraki prefecture.<br>
+            Hey I'm Kyo from Japan. Very nice to meet you👋<br>
+            I'm currently University student at <a href="https://www.tsukuba.ac.jp/en/">Tsukuba</a>, Ibaraki prefecture.<br>
             I'm majoring computer science and realy interested in web development field.
+            I really like working out, playing sports, and travelling.
         </p>
     </div>
     <div class="note">
         <h2>Note</h2>
-        <a href="https://note.com/kyo24111/n/na62f30067a7a">Third Language 🇪🇸</a>
+        I wrote some artcile in order to leave my thinking and idea to the future. I will look back on these note and compare the transition of my value.<br>
+        Here are some artcles that I recommend to read.<br>
+        <ul>
+            <li>
+                <a href="https://note.com/kyo24111/n/na62f30067a7a">Kicked  off the Third Language</a>
+            </li>
+            <li>
+                <a href="https://note.com/kyo24111/n/n651701fec3d6">What is the meaningful student life?</a>
+            </li>
+            <li>
+                <a href="https://note.com/kyo24111/n/n51ef3da9e5e3">SNS eats your precious time</a>
+            </li>
+        </ul>
+        Also, you can cheke the whole articles through the "note" button below.
     </div>
     <div class="background">
         <h2>Background</h2>
@@ -127,8 +142,9 @@
                     color:"blue"
                 });
 
+                //salt lake city
                 var pins = new Microsoft.Maps.EntityCollection();
-                const location5 = new Microsoft.Maps.Location(40.7767168,-111.9905249);
+                const location5 = new Microsoft.Maps.Location(40.7765868,-111.9905246);
                 const pin5 = new Microsoft.Maps.Pushpin(location5,{
                     color:"blue"
                 });
@@ -222,9 +238,25 @@
                     color:"blue"
                 });
 
+                // guam
+                var pins = new Microsoft.Maps.EntityCollection();
+                const location20 = new Microsoft.Maps.Location(13.4245852,144.6186774);
+                const pin20 = new Microsoft.Maps.Pushpin(location20,{
+                    color:"blue"
+                });
+
+                // chicago
+                var pins = new Microsoft.Maps.EntityCollection();
+                const location21 = new Microsoft.Maps.Location(41.8336479,-87.8720462);
+                const pin21 = new Microsoft.Maps.Pushpin(location21,{
+                    color:"blue"
+                });
+
+
                 pins.push([
                     pin1,pin2,pin3,pin4,pin5,pin6,pin7,pin8,pin9,pin10,
-                    pin11,pin12,pin13,pin14,pin15,pin16,pin17,pin18,pin19
+                    pin11,pin12,pin13,pin14,pin15,pin16,pin17,pin18,pin19,pin20,
+                    pin21
                 ])
                 map.entities.push(pins);
             }
@@ -234,7 +266,7 @@
             pin2 = lucerne
             pin3 = bern
             pin4 = geneva
-            pin5 = utah
+            pin5 = salt lake city
             pin6 = newyork
             pin7 = barcelona
             pin8 = nice
@@ -249,6 +281,8 @@
             pin17 = amsterdam
             pin18 = utrecht
             pin19 = honolulu
+            pin20 = guam
+            pin21 = chicago
         -->
     </div>
 
