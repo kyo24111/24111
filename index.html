@@ -170,26 +170,21 @@
                 ]
 
                 const lat_lon_value_blue = {};
-                const lat_lon_value_green = {};
+                // const lat_lon_value_green = {};
                 const pin = {};
-                for (let i = 1; i < 15; i ++){
-                    console.log(lat_lon_array[i][0],lat_lon_array[i][1]);
+                for (let i = 1; i < 22; i ++){
                     lat_lon_value_blue["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
-                        color:"blue"
-                    });
+                    if(i < 15){
+                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
+                            color:"blue"
+                        });
+                    }else{
+                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
+                            color:"green"
+                        });                        
+                    }
                     pins.push([
                         pin["pin" + i]
-                    ])
-                }
-                for (let j = 15; j < 22; j ++){
-                    console.log(lat_lon_array[j][0],lat_lon_array[j][1]);
-                    lat_lon_value_green["location" + j] = new Microsoft.Maps.Location(lat_lon_array[j][0],lat_lon_array[j][1]);
-                    pin["pin" + j] = new Microsoft.Maps.Pushpin(lat_lon_value_green["location" + j],{
-                        color:"green"
-                    });
-                    pins.push([
-                        pin["pin" + j]
                     ])
                 }
 
