@@ -127,11 +127,6 @@
         <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AvxKcSNSCKWiOEowtQgiX3knTpGoO62EA7J_KK-6-2IY1o_qSdrfYTdiGIwrbtcA' async defer></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
-        //     let map; //mapObject
-        //     function GetMap() {
-        //     map = mapStart("#myMap", 47.6149, -122.1941, "load", 18); //Initialization processing
-        //     mapPushpin(map, 47.6149, -122.1941, "#ff0000", true,true,true,true); //pushpin
-        // }
             function GetMap() {
                 // 以下はブラウザーにマップのセンターの位置を決めて表示する関数
                 let map = new Microsoft.Maps.Map('#myMap', {
@@ -148,147 +143,58 @@
                 });
                 map.entities.push(pin0);
 
-                // for (let i = 1; i < 4; i++){
-                //     console.log(i);
-                // }
-
                 var pins = new Microsoft.Maps.EntityCollection();
-                // const location_array = [(0),[47.3768,8.5416],(47.0548081,8.2472857),(46.9547658,7.3248304)]
+                var lat_lon_array = [
+                    [[0],[0]], 
+                    [47.3768,8.5416], //1:zurich
+                    [[47.0548081],[8.2472857]],  //2:lucerne
+                    [[46.9547658],[7.3248304]],  //3:bern
+                    [[46.2050836],[6.1090692]],  //4:geneva
+                    [[40.7765868],[-111.9905246]], //5:salt lake city
+                    [[40.7237127],[-74.0343547]],  //6:newyork
+                    [[41.393077],[2.1163546]],  //7:barcelona
+                    [[43.6948661],[7.2684545]],  //8:nice
+                    [[48.1862549],[16.3118865]], //9:vienna
+                    [[47.3768],[8.5416]], //10:constanz
+                    [[46.5285767],[6.5824553]],  //11:lausanne
+                    [[21.3281792],[-157.8691133]],  //honolulu
+                    [[13.4245852],[144.6186774]],  //13guam
+                    [[41.8336479],[-87.8720462]], //14:chicago
+                    [[25.0763815],[54.9475576]],  //15:dubai
+                    [[37.7577627],[-122.4726194]],  //16:sanfrancisco
+                    [[34.0207305],[-118.6919187]],  //losangeles
+                    [[41.292032],[-96.2213322]],  //omaha
+                    [[47.6131746],[-122.4821474]],  //seattle 
+                    [[52.3547498],[4.8339209]],  //amsterdam
+                    [[52.0842715],[5.012452]],  //21:utrecht
+                ]
 
-        
-
-                // const location1 = new Microsoft.Maps.Location(location_array[1]);
-                // const pin1 = new Microsoft.Maps.Pushpin(location1,{
-                //     color:"blue"
-                // });
-
-                const location1 = new Microsoft.Maps.Location(47.3768,8.5416);
-                const pin1 = new Microsoft.Maps.Pushpin(location1,{
-                    color:"blue"
-                });
-
-                const location2 = new Microsoft.Maps.Location(47.0548081,8.2472857);
-                const pin2 = new Microsoft.Maps.Pushpin(location2,{
-                    color:"blue"
-                });
-
-                const location3 = new Microsoft.Maps.Location(46.9547658,7.3248304);
-                const pin3 = new Microsoft.Maps.Pushpin(location3,{
-                    color:"blue"
-                });
-
-                const location4 = new Microsoft.Maps.Location(46.2050836,6.1090692);
-                const pin4 = new Microsoft.Maps.Pushpin(location4,{
-                    color:"blue"
-                });
-
-                //salt lake city
-                const location5 = new Microsoft.Maps.Location(40.7765868,-111.9905246);
-                const pin5 = new Microsoft.Maps.Pushpin(location5,{
-                    color:"blue"
-                });
-
-                const location6 = new Microsoft.Maps.Location(40.7237127,-74.0343547);
-                const pin6 = new Microsoft.Maps.Pushpin(location6,{
-                    color:"blue"
-                });
-
-                const location7 = new Microsoft.Maps.Location(41.393077,2.1163546);
-                const pin7 = new Microsoft.Maps.Pushpin(location7,{
+                const lat_lon_value_blue = {};
+                const lat_lon_value_green = {};
+                const pin = {};
+                for (let i = 1; i < 15; i ++){
+                    console.log(lat_lon_array[i][0],lat_lon_array[i][1]);
+                    lat_lon_value_blue["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
+                    pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
                         color:"blue"
-                });
-
-                const location8 = new Microsoft.Maps.Location(43.6948661,7.2684545);
-                const pin8 = new Microsoft.Maps.Pushpin(location8,{
-                    color:"blue"
-                });
-
-                const location9 = new Microsoft.Maps.Location(48.1862549,16.3118865);
-                const pin9 = new Microsoft.Maps.Pushpin(location9,{
-                    color:"blue"
-                });
-
-                const location10 = new Microsoft.Maps.Location(47.3768,8.5416);
-                const pin10 = new Microsoft.Maps.Pushpin(location10,{
-                    color:"blue"
-                });
-
-                const location11 = new Microsoft.Maps.Location(46.5285767,6.5824553);
-                const pin11 = new Microsoft.Maps.Pushpin(location11,{
-                    color:"blue"
-                });
-
-                const location12 = new Microsoft.Maps.Location(25.0763815,54.9475576);
-                const pin12 = new Microsoft.Maps.Pushpin(location12,{
-                    color:"green"
-                });
-
-                const location13 = new Microsoft.Maps.Location(37.7577627,-122.4726194);
-                const pin13 = new Microsoft.Maps.Pushpin(location13,{
-                    color:"green"
-                });
-
-                const location14 = new Microsoft.Maps.Location(34.0207305,-118.6919187);
-                const pin14 = new Microsoft.Maps.Pushpin(location14,{
+                    });
+                    pins.push([
+                        pin["pin" + i]
+                    ])
+                }
+                for (let j = 15; j < 22; j ++){
+                    console.log(lat_lon_array[j][0],lat_lon_array[j][1]);
+                    lat_lon_value_green["location" + j] = new Microsoft.Maps.Location(lat_lon_array[j][0],lat_lon_array[j][1]);
+                    pin["pin" + j] = new Microsoft.Maps.Pushpin(lat_lon_value_green["location" + j],{
                         color:"green"
-                });
+                    });
+                    pins.push([
+                        pin["pin" + j]
+                    ])
+                }
 
-                // omaha
-                const location15 = new Microsoft.Maps.Location(41.292032,-96.2213322);
-                const pin15 = new Microsoft.Maps.Pushpin(location15,{
-                    color:"green"
-                });
-
-                // seattle
-                const location16 = new Microsoft.Maps.Location(47.6131746,-122.4821474);
-                const pin16 = new Microsoft.Maps.Pushpin(location16,{
-                    color:"green"
-                });
-
-                // amsterdam
-                const location17 = new Microsoft.Maps.Location(52.3547498,4.8339209);
-                const pin17 = new Microsoft.Maps.Pushpin(location17,{
-                    color:"green"
-                });
-
-                // utrecht
-                const location18 = new Microsoft.Maps.Location(52.0842715,5.012452);
-                const pin18 = new Microsoft.Maps.Pushpin(location18,{
-                    color:"green"
-                });
-
-                // honolulu
-                const location19 = new Microsoft.Maps.Location(21.3281792,-157.8691133);
-                const pin19 = new Microsoft.Maps.Pushpin(location19,{
-                    color:"blue"
-                });
-
-                // guam
-                const location20 = new Microsoft.Maps.Location(13.4245852,144.6186774);
-                const pin20 = new Microsoft.Maps.Pushpin(location20,{
-                    color:"blue"
-                });
-
-                // chicago
-                const location21 = new Microsoft.Maps.Location(41.8336479,-87.8720462);
-                const pin21 = new Microsoft.Maps.Pushpin(location21,{
-                    color:"blue"
-                });
-
-
-                pins.push([
-                    pin1,pin2,pin3,pin4,pin5,pin6,pin7,pin8,pin9,pin10,
-                    pin11,pin12,pin13,pin14,pin15,pin16,pin17,pin18,pin19,pin20,
-                    pin21
-                ])
                 map.entities.push(pins);
             }
-
-            // for(let j = 0; j < 5; j ++){
-            //     const pin(j) = j + "番目のピン";
-            //     console.log(pin(j));
-            // }
-            // // 変数pin1,pin2 ... と生成したい
         </script>
         <!-- 
             pin1 = zurich
@@ -302,16 +208,16 @@
             pin9 = vienna
             pin10 = constanz
             pin11 = lausanne
-            pin12 = dubai
-            pin13 = sanfrancisco
-            pin14 = losangeles
-            pin15 = omaha
-            pin16 = seattle
-            pin17 = amsterdam
-            pin18 = utrecht
-            pin19 = honolulu
-            pin20 = guam
-            pin21 = chicago
+            pin12 = honolulu
+            pin13 = guam
+            pin14 = chicago
+            pin15 = dubai
+            pin16 = sanfrancisco
+            pin17 = losangeles
+            pin18 = omaha
+            pin19 = seattle
+            pin20 = amsterdam
+            pin21 = utrecht
         -->
     </div>
     <script type="text/javascript" src="main.js"></script>
