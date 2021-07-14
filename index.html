@@ -145,41 +145,40 @@
 
                 var pins = new Microsoft.Maps.EntityCollection();
                 var lat_lon_array = [
-                    [[0],[0]], 
+                    [[0,0], 
                     [47.3768,8.5416], //1:zurich
-                    [[47.0548081],[8.2472857]],  //2:lucerne
-                    [[46.9547658],[7.3248304]],  //3:bern
-                    [[46.2050836],[6.1090692]],  //4:geneva
-                    [[40.7765868],[-111.9905246]], //5:salt lake city
-                    [[40.7237127],[-74.0343547]],  //6:newyork
-                    [[41.393077],[2.1163546]],  //7:barcelona
-                    [[43.6948661],[7.2684545]],  //8:nice
-                    [[48.1862549],[16.3118865]], //9:vienna
-                    [[47.3768],[8.5416]], //10:constanz
-                    [[46.5285767],[6.5824553]],  //11:lausanne
-                    [[21.3281792],[-157.8691133]],  //honolulu
-                    [[13.4245852],[144.6186774]],  //13guam
-                    [[41.8336479],[-87.8720462]], //14:chicago
-                    [[25.0763815],[54.9475576]],  //15:dubai
-                    [[37.7577627],[-122.4726194]],  //16:sanfrancisco
-                    [[34.0207305],[-118.6919187]],  //losangeles
-                    [[41.292032],[-96.2213322]],  //omaha
-                    [[47.6131746],[-122.4821474]],  //seattle 
-                    [[52.3547498],[4.8339209]],  //amsterdam
-                    [[52.0842715],[5.012452]],  //21:utrecht
+                    [47.0548081,8.2472857],  //2:lucerne
+                    [[46.9547658,7.3248304],  //3:bern
+                    [[46.2050836,6.1090692],  //4:geneva
+                    [[40.7765868,-111.9905246], //5:salt lake city
+                    [[40.7237127,-74.0343547],  //6:newyork
+                    [[41.393077,2.1163546],  //7:barcelona
+                    [[43.6948661,7.2684545],  //8:nice
+                    [[48.1862549,16.3118865], //9:vienna
+                    [[47.3768,8.5416], //10:constanz
+                    [[46.5285767,6.5824553],  //11:lausanne
+                    [[21.3281792,-157.8691133],  //honolulu
+                    [[13.4245852,144.6186774],  //13guam
+                    [[41.8336479,-87.8720462], //14:chicago
+                    [[25.0763815,54.9475576],  //15:dubai
+                    [[37.7577627,-122.4726194],  //16:sanfrancisco
+                    [[34.0207305,-118.6919187],  //losangeles
+                    [[41.292032,-96.2213322],  //omaha
+                    [[47.6131746,-122.4821474],  //seattle 
+                    [[52.3547498,4.8339209],  //amsterdam
+                    [[52.0842715,5.012452],  //21:utrecht
                 ]
 
-                const lat_lon_value_blue = {};
-                // const lat_lon_value_green = {};
+                const lat_lon_value = {};
                 const pin = {};
                 for (let i = 1; i < 22; i ++){
-                    lat_lon_value_blue["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
+                    lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
                     if(i < 15){
-                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
+                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
                     }else{
-                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value_blue["location" + i],{
+                        pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"green"
                         });                        
                     }
