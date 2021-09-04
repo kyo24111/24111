@@ -76,7 +76,10 @@
         2016/04-2019/03：Graduate from Kokubunji High School.<br>
         2019/04-2020/03：Tsukuba Univ, majoring in Sports Science.<br>
         2021/04-Present：Tsukuba Univ, majoring in Computer Science.<br>
+        <h4>Extracurricular Activities</h4>
+        2021/07-2021/09：Discussion & Research Program about SDG's with NTU(National Taiwan University).<br>
     </div>
+
 
     <div class="exploration">
         <h2>Exploration</h2>
@@ -87,7 +90,7 @@
         </p>
         <h3>Travelling prospect in 2021</h3>
         <p>
-            2021/08：San Francisco,Los Angels,Seattle,Omaha/USA🇺🇸<br>
+            2021/09：San Francisco, Los Angels, Austin, Dallas, Miami, Phoenix, Detroit, Salt Lake City, Omaha/USA🇺🇸<br>
             2021/10：Dubai/UAE🇦🇪<br>
             2021/11：Amsterdam,Utrecht/Netherland🇳🇱<br>
         </p>
@@ -112,7 +115,7 @@
         <div class="sns_account" style="display: grid;">
             <a href="https://twitter.com/kyo24111" class="twitter_button">Twitter</a>
             <a href="https://github.com/kyo24111" class="github_button">Github</a>
-            <a href="https://www.instagram.com/stranger_24111/" class="instagram_button">Instagram</a>
+            <a href="https://www.instagram.com/chest_24111/" class="instagram_button">Instagram</a>
             <a href="https://www.facebook.com/kyo24111" class="facebook_button">Facebook</a>
             <a href="https://note.com/kyo24111" class="note_button">Note</a>
         </div>
@@ -143,7 +146,7 @@
 
                 var pins = new Microsoft.Maps.EntityCollection();
                 var lat_lon_array = [
-                    [0,0], 
+                    [0,0],
                     [47.3768,8.5416], //1:zurich
                     [47.0548081,8.2472857],  //2:lucerne
                     [46.9547658,7.3248304],  //3:bern
@@ -158,27 +161,33 @@
                     [21.3281792,-157.8691133],  //honolulu
                     [13.4245852,144.6186774],  //13guam
                     [41.8336479,-87.8720462], //14:chicago
+                    [24.2164737,140.5247774], //15:Ogasawara
+                    [27.9948164,128.6901329], //16:Amami
                     [25.0763815,54.9475576],  //15:dubai
                     [37.7577627,-122.4726194],  //16:sanfrancisco
                     [34.0207305,-118.6919187],  //losangeles
                     [41.292032,-96.2213322],  //omaha
-                    [47.6131746,-122.4821474],  //seattle 
+                    [30.3339564,-97.90764],  //Austin
                     [52.3547498,4.8339209],  //amsterdam
                     [52.0842715,5.012452],  //21:utrecht
+                    [32.8205862,-96.8719785], //22:Dallas
+                    [42.3526896,-83.169416], //23:Detroit
+                    [33.6050976,-112.4059167], //24:Phoenix
+                    [25.7824033,-80.2645637], //25:Miami
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 22; i ++){
+                for (let i = 1; i < 28; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 15){
+                    if(i < 17){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
                     }else{
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"green"
-                        });                        
+                        });
                     }
                     pins.push([
                         pin["pin" + i]
