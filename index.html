@@ -156,7 +156,7 @@
                     [41.393077,2.1163546],  //7:barcelona
                     [43.6948661,7.2684545],  //8:nice
                     [48.1862549,16.3118865], //9:vienna
-                    [47.3768,8.5416], //10:constanz
+                    [47.708338,9.0816668], //10:constanz
                     [46.5285767,6.5824553],  //11:lausanne
                     [21.3281792,-157.8691133],  //honolulu
                     [13.4245852,144.6186774],  //13guam
@@ -174,11 +174,13 @@
                     [42.3526896,-83.169416], //23:Detroit
                     [33.6050976,-112.4059167], //24:Phoenix
                     [25.7824033,-80.2645637], //25:Miami
+                    [20.9800512,-89.7029587], //Merida
+                    [21.1213285,-86.9192738] //cancun
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 28; i ++){
+                for (let i = 1; i < 30; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
                     if(i < 17){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
