@@ -90,9 +90,11 @@
         </p>
         <h3>Travelling prospect in 2021</h3>
         <p>
-            2021/10：Miami, Detroit, Salt Lake City, Omaha/USA🇺🇸<br>
+            2021/10：Salt Lake City, Omaha, Detroit, Chicago, Orlando, Tampa, Miami, Atlanta/USA🇺🇸<br>
             2021/11：Dubai/UAE🇦🇪<br>
-            2021/11：Amsterdam,Utrecht/Netherland🇳🇱<br>
+            2021/12：Amsterdam,Utrecht/Netherland🇳🇱<br>
+            2022/05：London/UK🇬🇧<br>
+            2022/06：Merida, Cancun/Mexico🇲🇽<br>
         </p>
         <h3>My Exploration History</h3>
         <p>
@@ -165,13 +167,13 @@
                     [41.8336479,-87.8720462], //14:chicago
                     [24.2164737,140.5247774], //15:Ogasawara
                     [27.9948164,128.6901329], //16:Amami
-                    [32.1561231,-111.0242331], // Tucson
-                    [37.7577627,-122.4726194],  //16:sanfrancisco
-                    [34.0207305,-118.6919187],  //losangeles
+                    [32.1561231,-111.0242331], // 17:Tucson
+                    [37.7577627,-122.4726194],  //18:sanfrancisco
+                    [34.0207305,-118.6919187],  //19:losangeles
+                    [30.3339564,-97.90764],  //20:Austin
+                    [32.8205862,-96.8719785], //21:Dallas
+                    [33.6050976,-112.4059167], //22:Phoenix
                     [41.292032,-96.2213322],  //omaha
-                    [30.3339564,-97.90764],  //Austin
-                    [32.8205862,-96.8719785], //22:Dallas
-                    [33.6050976,-112.4059167], //24:Phoenix
                     [25.7824033,-80.2645637], //25:Miami
                     [42.3526896,-83.169416], //23:Detroit
                     [27.9947144,-82.5947089], //Tampa
@@ -181,14 +183,15 @@
                     [52.0842715,5.012452],  //21:utrecht
                     [20.9800512,-89.7029587], //Merida
                     [21.1213285,-86.9192738], //cancun
-                    [25.0763815,54.9475576] //15:dubai
+                    [25.0763815,54.9475576], //dubai
+                    [51.5287714,-0.2420246] //London
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 34; i ++){
+                for (let i = 1; i < 35; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 17){
+                    if(i < 23){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
