@@ -175,11 +175,13 @@
                     [32.8010767,-97.5701933], //22:Fort Worth
                     [33.6050976,-112.4059167], //23:Phoenix
                     [41.292032,-96.2213322],  //omaha
+                    [39.1006209,-94.5820441], //Kansas City
                     [25.7824033,-80.2645637], //25:Miami
                     [42.3526896,-83.169416], //23:Detroit
                     [27.9947144,-82.5947089], //Tampa
                     [28.4814029,-81.4830936], //Olrando
                     [33.7679188,-84.5610319], //Atlanta
+                    [41.5863709,-93.6255105], //Des Moine
                     [52.3547498,4.8339209],  //amsterdam
                     [52.0842715,5.012452],  //21:utrecht
                     [20.9800512,-89.7029587], //Merida
@@ -190,9 +192,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 36; i ++){
+                for (let i = 1; i < 38; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 24){
+                    if(i < 25){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
