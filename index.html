@@ -182,6 +182,7 @@
                     [28.4814029,-81.4830936], //Olrando
                     [33.7679188,-84.5610319], //Atlanta
                     [47.6057084,-122.3345737], //Seattle
+                    [49.2848415,-123.1185492], //Vancouver
                     [41.5863709,-93.6255105], //Des Moine
                     [52.3547498,4.8339209],  //amsterdam
                     [52.0842715,5.012452],  //21:utrecht
@@ -193,9 +194,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 39; i ++){
+                for (let i = 1; i < 40; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 25){
+                    if(i < 26){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
