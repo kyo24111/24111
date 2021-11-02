@@ -184,10 +184,11 @@
                     [28.4814029,-81.4830936], //32:Olrando
                     [42.3559007,-71.0588648], //33:Boston
                     [25.0763815,54.9475576], //34:dubai
-                    [30.0437643,31.2359889], //35:Cairo
-                    [29.9762063,31.1304624], //36:Giza
-                    [30.0063648,31.4896488], //37:New Cairo City
-                    [25.2858379,51.5280386], //38:Doha
+                    [24.4534143,54.3767173], //35:abu dhabi
+                    [30.0437643,31.2359889], //36:Cairo
+                    [29.9762063,31.1304624], //37:Giza
+                    [30.0063648,31.4896488], //38:New Cairo City
+                    [25.2858379,51.5280386], //39:Doha
                     [47.6057084,-122.3345737], //Seattle
                     [49.2848415,-123.1185492], //Vancouver
                     [52.3547498,4.8339209],  //amsterdam
@@ -199,9 +200,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 46; i ++){
+                for (let i = 1; i < 47; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 39){
+                    if(i < 40){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
