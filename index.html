@@ -92,9 +92,9 @@
         </p>
         <h3>Travelling prospect in 2021</h3>
         <p>
-            2021/10：Des Moines, Detroit, Chicago, Orlando, Tampa, Miami, Atlanta, Seattle/USA🇺🇸, Vancouver/Canada🇨🇦<br>
-            2021/11：Dubai/UAE🇦🇪<br>
             2021/12：Amsterdam,Utrecht/Netherland🇳🇱<br>
+            2021/12：Bangkok🇹🇭<br>
+            2022/03：Denver, Seattle, Sandiego, 
             2022/05：London/UK🇬🇧<br>
             2022/06：Merida, Cancun/Mexico🇲🇽<br>
         </p>
@@ -113,7 +113,7 @@
             2020/11：Amami/Japan_Kagoshima🇯🇵<br>
             2021/05：Ogasawara/Japan_Tokyo🇯🇵<br>
             2021/09：San Francisco, Los Angels, Austin, Dallas, Fort Worth/USA🇺🇸<br>
-            2021/10：Phoenix, Tucson, Salt Lake City, Omaha, Kansas City/USA🇺🇸<br>
+            2021/10：Phoenix, Tucson, Salt Lake City, Omaha, Kansas City, Des Moines, Detroit, Chicago, Philadelphia, Atlanta, Orlando, Tampa, Miami, Boston, New York/USA🇺🇸, Dubai/UAE🇦🇪, Cairo, Giza, New Cairo City/Egypt🇪🇬, Doha/Qatar🇶🇦<br>
         </p>
     </div>
 
@@ -181,26 +181,31 @@
                     [41.5863709,-93.6255105], //26:Des Moine
                     [42.3526896,-83.169416], //27:Detroit
                     [39.9520626,-75.1639303], //28:Philadelphia
-                    [33.7679188,-84.5610319], //29Atlanta
-                    [28.4814029,-81.4830936], //3O:lrando
+                    [33.7679188,-84.5610319], //29:Atlanta
+                    [25.7824033,-80.2645637], //30:Miami
                     [27.9947144,-82.5947089], //31:Tampa
-                    [25.7824033,-80.2645637], //Miami
-                    [39.7506761,-104.9984113], //denver
+                    [28.4814029,-81.4830936], //32:Olrando
+                    [42.3559007,-71.0588648], //33:Boston
+                    [25.0763815,54.9475576], //34:dubai
+                    [24.4534143,54.3767173], //35:abu dhabi
+                    [30.0437643,31.2359889], //36:Cairo
+                    [29.9762063,31.1304624], //37:Giza
+                    [30.0063648,31.4896488], //38:New Cairo City
+                    [25.2858379,51.5280386], //39:Doha
                     [47.6057084,-122.3345737], //Seattle
                     [49.2848415,-123.1185492], //Vancouver
                     [52.3547498,4.8339209],  //amsterdam
                     [52.0842715,5.012452],  //21:utrecht
                     [20.9800512,-89.7029587], //Merida
                     [21.1213285,-86.9192738], //cancun
-                    [25.0763815,54.9475576], //dubai
                     [51.5287714,-0.2420246] //London
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 42; i ++){
+                for (let i = 1; i < 47; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 32){
+                    if(i < 40){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
