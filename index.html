@@ -195,12 +195,13 @@
                     [52.0842715,5.012452],  //21:utrecht
                     [20.9800512,-89.7029587], //Merida
                     [21.1213285,-86.9192738], //cancun
-                    [51.5287714,-0.2420246] //London
+                    [51.5287714,-0.2420246], //London
+                    [8.9633398,38.7079327] //Addis Ababa
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 47; i ++){
+                for (let i = 1; i < 48; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
                     if(i < 40){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
