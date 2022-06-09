@@ -90,13 +90,13 @@
             Travelling broadened my horizons and make me fresh every time. Of course, I love it. and I wanna explore more and more in the future.<br>
             At the moment, the next travelling plan is here. It depends on the situation of covid19, so I hope it settled down as soon as possible<br>
         </p> -->
-        <h3>Travelling prospect in 2021</h3>
+        <h3>Travelling prospect in 2022</h3>
         <p></p>
             2022/06: Phnom Penh/Cambodia🇰🇭, Vientiane/Laos🇱🇦, Bangkok/Thailand🇹🇭, Zurich/Swiss🇨🇭<br>
             2022/07: Berlin/Germaney🇩🇪, London/UK🇬🇧, Amsterdam,Utrecht/Netherland🇳🇱<br>
             2022/??: Merida, Cancun/Mexico🇲🇽<br>
         </p>
-        <h3>My Exploration History</h3>
+        <h3>Exploration History</h3>
         <p>
             2001/07: Honolulu/Hawai🇺🇸<br>
             2006/07: Utah/USA🇺🇸<br>
@@ -199,6 +199,7 @@
                     [11.5793306,104.7501001], //Phnom Penh
                     [13.7245601,100.4930243], //Bangkok
                     [17.960427,102.5357251], //Vientiane
+                    [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
                     [49.2848415,-123.1185492], //Vancouver
                     [52.3547498,4.8339209],  //amsterdam
@@ -211,7 +212,7 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 54; i ++){
+                for (let i = 1; i < 55; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
                     if(i < 42){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
