@@ -196,7 +196,8 @@
                     [1.3437419,103.6839581], //40:Singapore
                     [3.1385036,101.6169489], //41:Kuala Lumpur
                     [16.0471659,108.1716865], //42:Da Nang
-                    [11.5793306,104.7501001], //Phnom Penh
+                    [10.7546664,106.415032], // 43:Ho Chi Minh
+                    [11.5793306,104.7501001], //44:Phnom Penh
                     [13.7245601,100.4930243], //Bangkok
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
@@ -212,9 +213,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 55; i ++){
+                for (let i = 1; i < 56; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 42){
+                    if(i < 44){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
