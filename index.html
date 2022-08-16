@@ -115,7 +115,8 @@
             2021/10: Phoenix, Tucson, Salt Lake City, Omaha, Kansas City, Des Moines, Detroit, Chicago, Philadelphia, Atlanta, Orlando, Tampa, Miami, Boston, New York/USA🇺🇸, Dubai/UAE🇦🇪, Cairo, Giza, New Cairo City/Egypt🇪🇬, Doha/Qatar🇶🇦<br>
             2022/04: Singapore🇸🇬<br>
             2022/05: Kuala Lumpur/Malaysia🇲🇾, Singapore🇸🇬<br>
-            2022/06: Singapore🇸🇬, Da Nang, Ho Chi Minh/Vietnam🇻🇳, Phnom Penh/Cambodia🇰🇭<br>
+            2022/06: Singapore🇸🇬, Da Nang, Ho Chi Minh/Vietnam🇻🇳, Phnom Penh/Cambodia🇰🇭, Bangkok/Thailand🇹🇭, Vien/Austria🇦🇹, Zurich/Swiss🇨🇭<br>
+            2022/07: Manila/Philippines🇵🇭<br>
         </p>
     </div>
 
@@ -199,13 +200,18 @@
                     [16.0471659,108.1716865], //42:Da Nang
                     [10.7546664,106.415032], // 43:Ho Chi Minh
                     [11.5793306,104.7501001], //44:Phnom Penh
-                    [13.7245601,100.4930243], //Bangkok
+                    [13.7245601,100.4930243], //45:Bangkok
+                    [14.5965788,120.9445403], //46: Manila
+                    [53.3244431,-6.3857862], //47: Dublin
+                    [38.7436883,-9.1952227], //48: Lisbon
+                    [50.8552114,4.3053776], //49: Brusseles
+                    [55.6713442,12.5237845], //50: Copenhagen
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
                     [49.2848415,-123.1185492], //Vancouver
                     [52.3547498,4.8339209],  //amsterdam
-                    [52.0842715,5.012452],  //21:utrecht
+                    [52.0842715,5.012452],  //utrecht
                     [20.9800512,-89.7029587], //Merida
                     [21.1213285,-86.9192738], //cancun
                     [51.5287714,-0.2420246], //London
@@ -214,9 +220,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 56; i ++){
+                for (let i = 1; i < 61; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 45){
+                    if(i < 51){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
