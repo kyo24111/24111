@@ -119,7 +119,7 @@
             2022/05: Kuala Lumpur/Malaysia🇲🇾, Singapore🇸🇬<br>
             2022/06: Singapore🇸🇬, Da Nang, Ho Chi Minh/Vietnam🇻🇳, Phnom Penh/Cambodia🇰🇭, Bangkok/Thailand🇹🇭, Vien/Austria🇦🇹, Zurich/Swiss🇨🇭<br>
             2022/07: Manila/Philippines🇵🇭<br>
-            2022/08: Zurich/Swiss🇨🇭, Dublin/Ireland🇮🇪, Lisbon/Portugul🇵🇹, Barcelona/Spain🇪🇸, Brussels/Belgium🇧🇪, Copenhagen/Denmark🇩🇰<br>
+            2022/08: Zurich/Swiss🇨🇭, Dublin/Ireland🇮🇪, Lisbon/Portugul🇵🇹, Barcelona/Spain🇪🇸, Brussels/Belgium🇧🇪, Copenhagen/Denmark🇩🇰, Oslo/Norway🇳🇴, Stockholm/Sweden🇸🇪, Helsinki/Finland🇫🇮, Tallinn/Estonia🇪🇪, Riga/Ratvia🇱🇻, Vilnius/Lithuania🇱🇹, Warsaw/Poland🇵🇱, Istanbul/Turkey🇹🇷, Tunis, Carthage/Tunisia🇹🇳, Paris/France🇫🇷, Luxembourg/Luxembourg🇱🇺, Milan/Italy🇮🇹<br>
         </p>
     </div>
 
@@ -127,9 +127,10 @@
         <div class="sns_account" style="display: grid;">
             <a href="https://twitter.com/kyo24111" class="twitter_button">Twitter</a>
             <a href="https://github.com/kyo24111" class="github_button">Github</a>
-            <a href="https://www.instagram.com/chest_24111/" class="instagram_button">Instagram</a>
+            <a href="https://www.instagram.com/kyo24111/" class="instagram_button">Instagram</a>
             <a href="https://www.facebook.com/kyo24111" class="facebook_button">Facebook</a>
-            <a href="https://note.com/kyo24111" class="note_button">Note</a>
+            <!-- <a href="https://note.com/kyo24111" class="note_button">note</a> -->
+            <a href="https://app.ens.domains/name/kyo24111.eth" class="ens_button">ENS</a>
         </div>
     </div>
 
@@ -209,6 +210,19 @@
                     [38.7436883,-9.1952227], //48: Lisbon
                     [50.8552114,4.3053776], //49: Brusseles
                     [55.6713442,12.5237845], //50: Copenhagen
+                    [59.8939021,10.5049438], //51: Oslo
+                    [59.3249388,17.4215067], //52: Stockholm
+                    [60.105421,23.8971714], //53: Helsinki
+                    [59.4704932,24.1776968], //54: Tallinn
+                    [56.9705044,23.5685092], //55: Riga
+                    [54.6993911,24.6924521], //56: Vilnius
+                    [52.2316101,20.5005942], //57: Warsaw
+                    [41.0039632,28.4515034], //58: Istanbul
+                    [36.7949999,10.0732377], //59: Tunis
+                    [36.8592202,10.2612358], //60: Carthage
+                    [48.85877,2.206939], //61: Paris
+                    [49.6072497,5.8486796], //62: Luxembourg
+                    [45.4623912,8.8974942], //63: Milan
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -223,9 +237,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 61; i ++){
+                for (let i = 1; i < 74; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 51){
+                    if(i < 64){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });

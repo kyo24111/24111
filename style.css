@@ -1,5 +1,6 @@
 body{
     color: #494E52;
+    font-family: Arial, Helvetica, sans-serif
 }
 h1 {
     text-align: center;
@@ -147,7 +148,7 @@ h1 {
 }
 
 /* note */
-.note_button{
+/* .note_button{
     border: 1px solid #41c9b4;
     color: #41c9b4;
 }
@@ -156,6 +157,18 @@ h1 {
 }
 .note_button::before{
     border-color: transparent transparent transparent #41c9b4;
+} */
+
+/* ens */
+.ens_button{
+    border: 1px solid #253B8F;
+    color: #253B8F;
+}
+.ens_button:hover{
+    background: #253B8F;
+}
+.ens_button::before{
+    border-color: transparent transparent transparent #253B8F;
 }
 
 /* youtube */
