@@ -91,13 +91,13 @@
             Travelling broadened my horizons and make me fresh every time. Of course, I love it. and I wanna explore more and more in the future.<br>
             At the moment, the next travelling plan is here. It depends on the situation of covid19, so I hope it settled down as soon as possible<br>
         </p> -->
-        <h3>City Ranking</h3>
+        <!-- <h3>City Ranking</h3>
         <h4>Africa</h4>
         <p>Addisababa/Ethiopia🇪🇹</p>
         <h4>Asia</h4>
         <p>Tel Aviv/Israel🇮🇱</p>
         <h4>South America</h4>
-        <p>La Paz/Bolivia🇧🇴</p>
+        <p>La Paz/Bolivia🇧🇴</p> -->
         
         <h3>Exploration History</h3>
         <p>
@@ -120,6 +120,7 @@
             2022/06: Singapore🇸🇬, Da Nang, Ho Chi Minh/Vietnam🇻🇳, Phnom Penh/Cambodia🇰🇭, Bangkok/Thailand🇹🇭, Vien/Austria🇦🇹, Zurich/Swiss🇨🇭<br>
             2022/07: Manila/Philippines🇵🇭<br>
             2022/08: Zurich/Swiss🇨🇭, Dublin/Ireland🇮🇪, Lisbon/Portugul🇵🇹, Barcelona/Spain🇪🇸, Brussels/Belgium🇧🇪, Copenhagen/Denmark🇩🇰, Oslo/Norway🇳🇴, Stockholm/Sweden🇸🇪, Helsinki/Finland🇫🇮, Tallinn/Estonia🇪🇪, Riga/Ratvia🇱🇻, Vilnius/Lithuania🇱🇹, Warsaw/Poland🇵🇱, Istanbul/Turkey🇹🇷, Tunis, Carthage/Tunisia🇹🇳, Paris/France🇫🇷, Luxembourg/Luxembourg🇱🇺, Milan/Italy🇮🇹<br>
+            2022/09: Belgrade/Serbia🇷🇸, Podgorica/Montenegro🇲🇪, Athen/Greece🇬🇷, Zurich/Swiss🇨🇭<br>
         </p>
     </div>
 
@@ -223,6 +224,9 @@
                     [48.85877,2.206939], //61: Paris
                     [49.6072497,5.8486796], //62: Luxembourg
                     [45.4623912,8.8974942], //63: Milan
+                    [44.81539,20.1424158], //64: Belgrade
+                    [42.4321061,19.1858391], //65: Podgorica
+                    [37.9908997,23.7033199], //66: Athen
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -237,9 +241,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 74; i ++){
+                for (let i = 1; i < 77; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 64){
+                    if(i < 67){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
