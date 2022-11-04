@@ -227,7 +227,10 @@
                     [44.81539,20.1424158], //64: Belgrade
                     [42.4321061,19.1858391], //65: Podgorica
                     [37.9908997,23.7033199], //66: Athen
-                    [], //67: Sydney
+                    [-33.8481647,150.7918923], //67: Sydney
+                    [-36.8597287,174.5660389], //68: Auckland
+                    [-6.2297419,106.7594781], //69: Jakarta
+                    [49.2577143,-123.1939432], //70: Vancouver
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -242,9 +245,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 77; i ++){
+                for (let i = 1; i < 81; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 67){
+                    if(i < 71){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
