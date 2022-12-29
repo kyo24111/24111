@@ -148,7 +148,7 @@
             function GetMap() {
                 // 以下はブラウザーにマップのセンターの位置を決めて表示する関数
                 let map = new Microsoft.Maps.Map('#myMap', {
-                    center: new Microsoft.Maps.Location(1.3437419,103.6839581), 
+                    center: new Microsoft.Maps.Location(35.5040536,138.6486328), 
                     mapTypeId: Microsoft.Maps.MapTypeId.terrain,
                     zoom:3,
 
@@ -256,7 +256,7 @@
             const pin = {};
                 for (let i = 1; i < 87; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 76){
+                    if(i < 79){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
