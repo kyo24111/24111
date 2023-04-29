@@ -124,6 +124,7 @@
             2022/10: Sydney/Australia🇦🇺, Auckland/New Zealand🇳🇿, Jakarta/Indonesia🇮🇩, Vancouver/Canada🇨🇦<br>
             2022/11: San Francisco, Las Vegas, Los Angels/US🇺🇸, MexicoCity/Mexico🇲🇽, San Jose/Costa Rica🇨🇷, Guatemala City/Guatemala🇬🇹, Seoul/Korea🇰🇷, Singapore🇸🇬, Doha/Qatar🇶🇦, London/England🏴󠁧󠁢󠁥󠁮󠁧󠁿, Lisbon/Portugul🇵🇹, Frankfrut/Germany🇩🇪<br>
             2022/12: Bangkok/Thailand🇹🇭, Taipei/Taiwan🇹🇼<br>
+            2023/04: Seoul/Korea🇰🇷, Hong Kong🇭🇰, Shenzhen/China🇨🇳, Macau🇲🇴<br>
         </p>
     </div>
 
@@ -242,6 +243,9 @@
                     [51.5287714,-0.2420246], //76: London
                     [50.1211277,8.4964812], //77: Frankfrut
                     [25.0853403,121.4214155], //78: Taipei
+                    [22.3526401,113.9628916], //79: Hong Kong
+                    [22.5550763,113.8890705], //80: Shenzhen
+                    [22.1618268,113.5289531], //81: Macau
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -254,9 +258,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 87; i ++){
+                for (let i = 1; i < 90; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 79){
+                    if(i < 82){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
@@ -273,30 +277,6 @@
                 map.entities.push(pins);
             }
         </script>
-        <!--
-            pin1 = zurich
-            pin2 = lucerne
-            pin3 = bern
-            pin4 = geneva
-            pin5 = salt lake city
-            pin6 = newyork
-            pin7 = barcelona
-            pin8 = nice
-            pin9 = vienna
-            pin10 = constanz
-            pin11 = lausanne
-            pin12 = honolulu
-            pin13 = guam
-            pin14 = chicago
-            pin15 = dubai
-            pin16 = sanfrancisco
-            pin17 = losangeles
-            pin18 = omaha
-            pin19 = seattle
-            pin20 = amsterdam
-            pin21 = utrecht
-            pin22 = Tucson
-        -->
     </div>
     <script type="text/javascript" src="main.js"></script>
     <footer>
