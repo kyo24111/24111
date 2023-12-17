@@ -126,6 +126,8 @@
             2022/12: Bangkok/Thailand🇹🇭, Taipei/Taiwan🇹🇼<br>
             2023/04: Seoul/Korea🇰🇷, Hong Kong🇭🇰, Shenzhen/China🇨🇳, Macau🇲🇴<br>
             2023/07: Zurich/Swiss🇨🇭, Paris/France🇫🇷<br>
+            2023/10: Bangkok/Thailand🇹🇭, Colombo/Sri Lanka🇱🇰, Kathmandu/Nepal🇳🇵<br>
+            2023/11: Delhi/India🇮🇳, Ho Chi Minh/Vietnam🇻🇳<br>
         </p>
     </div>
 
@@ -247,6 +249,10 @@
                     [22.3526401,113.9628916], //79: Hong Kong
                     [22.5550763,113.8890705], //80: Shenzhen
                     [22.1618268,113.5289531], //81: Macau
+                    [6.9218369,79.8150057], //82: Colombo
+                    [27.7089543,85.2849331], //83: Kathmandu
+                    [28.2296977,83.8742169], //84: Pokhara
+                    [28.6436846,76.7635778], //85: Delhi
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -259,9 +265,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 90; i ++){
+                for (let i = 1; i < 94; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 82){
+                    if(i < 86){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
