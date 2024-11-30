@@ -265,7 +265,7 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 95; i ++){
+                for (let i = 1; i < 94; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
                     if(i < 87){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
