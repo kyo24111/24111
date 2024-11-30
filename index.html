@@ -253,10 +253,10 @@
                     [27.7089543,85.2849331], //83: Kathmandu
                     [28.2296977,83.8742169], //84: Pokhara
                     [28.6436846,76.7635778], //85: Delhi
+                    [52.354637,4.821561], //86: Amsterdam
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
-                    [52.3547498,4.8339209],  //amsterdam
                     [52.0842715,5.012452],  //utrecht
                     [20.9800512,-89.7029587], //Merida
                     [21.1213285,-86.9192738], //cancun
@@ -265,9 +265,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 94; i ++){
+                for (let i = 1; i < 95; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 86){
+                    if(i < 87){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
