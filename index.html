@@ -132,6 +132,10 @@
             2024/05: Delhi, Bengarole, Hyderabad/India🇮🇳<br>
             2024/06: Taipei/Taiwan🇹🇼<br>
             2024/11: Zurich/Swiss🇨🇭, Amsterdam/Netherland🇳🇱, Singapore🇸🇬, Jakarta/Indonesia🇮🇩, Kuala Lumpur/Malaysia🇲🇾, Shanghai/China🇨🇳<br>
+            2024/12: Zurich/Swiss🇨🇭, Sao Paulo/Brazil🇧🇷, Buenos Aires/Argentina🇦🇷, Montevideo/Uruguay🇺🇾<br>
+            2025/01: Santiago/Chile🇨🇱, Sao Paulo/Brazil🇧🇷, Zurich/Swiss🇨🇭<br>
+            2025/04: Beijing/China🇨🇳, New Delhi, Agra, Hyderabad, Mumbai/India🇮🇳, Dubai/UAI🇦🇪, Johannesburg/South Africa🇿🇦, Addis Ababa/Ethiopia🇪🇹, Kigali/Rwanda🇷🇼, Nairobi/Kenya🇰🇪<br>
+            2025/05: Dar es Salaam/Tanzania🇹🇿, Johannesburg/South Africa🇿🇦, Zurich/Swiss🇨🇭, Shanghai/China🇨🇳, Macau🇲🇴<br>
         </p>
     </div>
 
@@ -262,20 +266,30 @@
                     [25.0853833,121.4791008], //88: Taipei
                     [52.354637,4.821561], //89: Amsterdam
                     [31.2239286,121.1471181], //90: Shanghai
+                    [-23.6820636,-46.9249364], //91: Sao Paulo
+                    [-34.6157959,-58.5158702], //92: Buenos Aires
+                    [-34.8344213,-56.2800433], //93: Montevideo
+                    [-33.4726784,-70.7949802], //94: Santiago
+                    [27.1761685,77.9387277], //95: Agra
+                    [19.0824819,72.7137908], //96: Mumbai
+                    [-26.1715156,27.9987393], //97: Johannesburg
+                    [8.9633398,38.7079327], //98: Addis Ababa
+                    [-1.9297686,30.0446721], //99: Kigali
+                    [-1.3032076,36.7648245], //100: Nairobi
+                    [-6.7694921,38.9428109], //101: Dar es Salaam
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
                     [52.0842715,5.012452],  //utrecht
                     [20.9800512,-89.7029587], //Merida
-                    [21.1213285,-86.9192738], //cancun
-                    [8.9633398,38.7079327], //Addis Ababa
+                    [21.1213285,-86.9192738], //Cancun
                 ]
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 98; i ++){
+                for (let i = 1; i < 108; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 91){
+                    if(i < 102){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
