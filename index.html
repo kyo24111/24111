@@ -277,6 +277,7 @@
                     [-1.9297686,30.0446721], //99: Kigali
                     [-1.3032076,36.7648245], //100: Nairobi
                     [-6.7694921,38.9428109], //101: Dar es Salaam
+                    [39.9384171,116.0678307], //102: Beijing
                     [17.960427,102.5357251], //Vientiane
                     [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
@@ -291,9 +292,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 112; i ++){
+                for (let i = 1; i < 113; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 102){
+                    if(i < 103){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
