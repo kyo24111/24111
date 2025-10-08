@@ -136,6 +136,7 @@
             2025/01: Santiago/Chile🇨🇱, Sao Paulo/Brazil🇧🇷, Zurich/Swiss🇨🇭<br>
             2025/04: Beijing/China🇨🇳, New Delhi, Agra, Hyderabad, Mumbai/India🇮🇳, Dubai/UAI🇦🇪, Johannesburg/South Africa🇿🇦, Addis Ababa/Ethiopia🇪🇹, Kigali/Rwanda🇷🇼, Nairobi/Kenya🇰🇪<br>
             2025/05: Dar es Salaam/Tanzania🇹🇿, Johannesburg/South Africa🇿🇦, Zurich/Swiss🇨🇭, Shanghai/China🇨🇳, Macau🇲🇴<br>
+            2025/08: Ishigaki/Japan🇯🇵, Zurich/Swiss🇨🇭, Berlin/Germany🇩🇪, Rome/Italy🇮🇹, Madrid, Mallorca/Spain🇪🇸, London/UK🇬🇧<br>
         </p>
     </div>
 
@@ -278,8 +279,12 @@
                     [-1.3032076,36.7648245], //100: Nairobi
                     [-6.7694921,38.9428109], //101: Dar es Salaam
                     [39.9384171,116.0678307], //102: Beijing
+                    [24.4721144,124.0401718], //103: Ishigaki
+                    [52.5065133,13.1445545], //104: Berlin
+                    [41.9102083,12.3708476], //105: Rome
+                    [40.4380981,-3.8446872], //106: Madrid
+                    [39.6078929,1.664803], //107: Mallorca
                     [17.960427,102.5357251], //Vientiane
-                    [52.5065133,13.1445545], //Berlin
                     [47.6057084,-122.3345737], //Seattle
                     [52.0842715,5.012452],  //utrecht
                     [20.9800512,-89.7029587], //Merida
@@ -292,9 +297,9 @@
 
             const lat_lon_value = {};
             const pin = {};
-                for (let i = 1; i < 113; i ++){
+                for (let i = 1; i < 117; i ++){
                     lat_lon_value["location" + i] = new Microsoft.Maps.Location(lat_lon_array[i][0],lat_lon_array[i][1]);
-                    if(i < 103){
+                    if(i < 108){
                         pin["pin" + i] = new Microsoft.Maps.Pushpin(lat_lon_value["location" + i],{
                             color:"blue"
                         });
