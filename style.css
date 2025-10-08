@@ -224,3 +224,28 @@ h1 {
     margin-left: 10%;
     color: #8a8a8a;
 }
+.visited-flags {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.visited-flags h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.flag-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  max-width: 300px;
+  gap: 10px;
+  justify-items: center;
+}
+
+.flag-grid.emoji li {
+  font-size: 2rem;
+  line-height: 1;
+}
